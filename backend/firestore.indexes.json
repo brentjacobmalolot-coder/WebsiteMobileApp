@@ -1,0 +1,46 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "emergency_audit_log",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "zoneId", "order": "ASCENDING" },
+        { "fieldPath": "serverTimestamp", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "emergency_audit_log",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "dispatchedBy", "order": "ASCENDING" },
+        { "fieldPath": "serverTimestamp", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "device_subscriptions",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "topics", "arrayConfig": "CONTAINS" },
+        { "fieldPath": "active", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "critical_approvals",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "zoneId", "order": "ASCENDING" },
+        { "fieldPath": "approverUid", "order": "ASCENDING" },
+        { "fieldPath": "expiresAtMs", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "emergency_protocols",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "isActive", "order": "ASCENDING" },
+        { "fieldPath": "lastUpdated", "order": "ASCENDING" }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

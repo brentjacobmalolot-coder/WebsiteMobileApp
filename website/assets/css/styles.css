@@ -1,0 +1,287 @@
+/**
+ * CampusAlert Pro — Custom Styles
+ * Material Design 3 aesthetic with Forest Green (#1B4D3E) primary palette
+ */
+
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #F4F7F5;
+    color: #0a2620;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+   Gradient Text
+   ========================================================================== */
+
+.gradient-text {
+    background: linear-gradient(135deg, #1B4D3E 0%, #87A96B 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+
+.hero-glow {
+    background:
+        radial-gradient(ellipse at top, rgba(135, 169, 107, 0.15) 0%, transparent 60%),
+        radial-gradient(ellipse at bottom right, rgba(27, 77, 62, 0.1) 0%, transparent 60%);
+}
+
+/* ==========================================================================
+   Phone Mockup Frame
+   ========================================================================== */
+
+.phone-frame {
+    background: linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 100%);
+    box-shadow:
+        0 50px 100px -20px rgba(27, 77, 62, 0.35),
+        0 30px 60px -30px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* ==========================================================================
+   Notification Card Animation
+   ========================================================================== */
+
+.notification-card {
+    animation: slideIn 0.8s ease-out 0.5s both;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ==========================================================================
+   Glass Card Effect
+   ========================================================================== */
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* ==========================================================================
+   Map Grid Background
+   ========================================================================== */
+
+.map-grid {
+    background-image:
+        linear-gradient(rgba(27, 77, 62, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(27, 77, 62, 0.08) 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+
+/* ==========================================================================
+   SOC Grid Background
+   ========================================================================== */
+
+.soc-grid {
+    background-image:
+        linear-gradient(rgba(135, 169, 107, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(135, 169, 107, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* ==========================================================================
+   Pulse Dot Animation
+   ========================================================================== */
+
+.pulse-dot {
+    position: relative;
+}
+
+.pulse-dot::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: inherit;
+    animation: pulseRing 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulseRing {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+/* ==========================================================================
+   Shimmer Loading Effect
+   ========================================================================== */
+
+.shimmer {
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.4) 50%,
+        transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* ==========================================================================
+   Navigation Blur Effect
+   ========================================================================== */
+
+.nav-blur {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+}
+
+/* ==========================================================================
+   Feature Card Hover Effects
+   ========================================================================== */
+
+.feature-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -10px rgba(27, 77, 62, 0.15);
+}
+
+/* ==========================================================================
+   CTA Button Styles
+   ========================================================================== */
+
+.cta-button {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cta-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 25px -5px rgba(27, 77, 62, 0.3);
+}
+
+/* ==========================================================================
+   Store Badge Hover Effects
+   ========================================================================== */
+
+.store-badge {
+    transition: all 0.2s ease;
+}
+
+.store-badge:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* ==========================================================================
+   Status Indicator with Pulse
+   ========================================================================== */
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+}
+
+.status-indicator::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #10b981;
+    margin-right: 8px;
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
+    animation: statusPulse 2s infinite;
+}
+
+@keyframes statusPulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}
+
+/* ==========================================================================
+   Scrollbar Styling
+   ========================================================================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f5f3;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b8d1c6;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #8eb4a3;
+}
+
+/* ==========================================================================
+   Selection Color
+   ========================================================================== */
+
+::selection {
+    background: rgba(27, 77, 62, 0.2);
+    color: #1B4D3E;
+}
+
+/* ==========================================================================
+   Focus States for Accessibility
+   ========================================================================== */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #87A96B;
+    outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Reduced Motion Support
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

@@ -1,0 +1,195 @@
+{
+  "site": {
+    "name": "CampusAlert Pro",
+    "tagline": "Seconds Matter: The Next Generation of Campus Safety",
+    "description": "Sub-second emergency alerts, AI-powered threat monitoring, and encrypted mesh communication — built to protect every student, faculty member, and visitor in real time.",
+    "year": 2026,
+    "url": "https://campusalertpro.com",
+    "version": "1.0.0"
+  },
+  "navigation": {
+    "logo": {
+      "text": "CampusAlert",
+      "suffix": "PRO"
+    },
+    "links": [
+      { "label": "Features", "href": "#features" },
+      { "label": "Architecture", "href": "#architecture" },
+      { "label": "Admin Portal", "href": "#admin" },
+      { "label": "Download", "href": "#download" }
+    ],
+    "cta": {
+      "primary": { "label": "Request Demo", "href": "#contact" },
+      "secondary": { "label": "Get App", "href": "#download" }
+    }
+  },
+  "hero": {
+    "badge": {
+      "text": "Trusted by 200+ Universities Worldwide",
+      "pulsing": true
+    },
+    "headline": "Seconds Matter:",
+    "headlineAccent": "The Next Generation",
+    "headlineSuffix": "of Campus Safety.",
+    "subheadline": "Sub-second emergency alerts, AI-powered threat monitoring, and encrypted mesh communication — built to protect every student, faculty member, and visitor in real time.",
+    "stats": [
+      { "value": "0.4s", "label": "Avg. Alert Latency" },
+      { "value": "2.4M+", "label": "Users Protected" },
+      { "value": "99.99%", "label": "Uptime SLA" }
+    ],
+    "actions": [
+      { "label": "Download Now", "href": "#download", "primary": true },
+      { "label": "Watch Demo", "href": "#features", "primary": false }
+    ]
+  },
+  "problemSolution": {
+    "title": "Outdated Sirens Can't Save Modern Campuses",
+    "description": "Legacy analog systems suffer from minutes-long latency and zero contextual awareness. CampusAlert Pro delivers a digital mesh that responds in milliseconds.",
+    "comparison": {
+      "legacy": {
+        "title": "Legacy Analog Sirens",
+        "items": [
+          { "title": "5–15 minute alert latency", "description": "Broadcast systems require manual chain-of-command" },
+          { "title": "No contextual information", "description": "A siren cannot tell you what happened or where to go" },
+          { "title": "Single point of failure", "description": "Tower damage or power loss = total blackout" },
+          { "title": "No two-way communication", "description": "Personnel cannot report status or request backup" }
+        ]
+      },
+      "solution": {
+        "title": "CampusAlert Pro Digital Mesh",
+        "items": [
+          { "title": "Sub-second FCM push delivery", "description": "Average 0.4s from dispatch to device receipt" },
+          { "title": "Rich, geo-targeted context", "description": "Threat type, severity, location, and evacuation routes" },
+          { "title": "Distributed, redundant infrastructure", "description": "Multi-region FCM with offline-first mobile fallback" },
+          { "title": "Two-way responder coordination", "description": "Real-time status, check-ins, and escalation flows" }
+        ]
+      }
+    }
+  },
+  "features": {
+    "title": "Engineered for Every Second of an Emergency",
+    "description": "A vertically integrated platform combining edge AI, geospatial intelligence, and zero-trust security.",
+    "items": [
+      {
+        "id": "instant-alerts",
+        "title": "Instant Alerts",
+        "description": "Sub-second FCM push notifications for severe weather, active threats, or facility lockdowns — delivered with full context and severity.",
+        "icon": "notification",
+        "color": "red"
+      },
+      {
+        "id": "smart-detection",
+        "title": "Smart Detection",
+        "description": "On-device TensorFlow Lite classification flags distress anomalies — glass-break, screams — locally without streaming audio to the cloud.",
+        "icon": "chip",
+        "color": "forest"
+      },
+      {
+        "id": "emergency-mapping",
+        "title": "Emergency Mapping",
+        "description": "Dynamic Google Maps routing guides users away from active hazard vectors via GeoJSON overlays and geofenced safe zones.",
+        "icon": "map",
+        "color": "blue"
+      },
+      {
+        "id": "encrypted-security",
+        "title": "Encrypted Security",
+        "description": "AES-256 end-to-end encryption, MFA, and SAML 2.0 SSO ensure total institutional privacy and FERPA / GDPR compliance.",
+        "icon": "lock",
+        "color": "purple"
+      }
+    ]
+  },
+  "architecture": {
+    "title": "Built on a Zero-Trust Foundation",
+    "description": "A vertically integrated stack — from native mobile to serverless cloud — engineered for high availability and regulatory compliance.",
+    "layers": [
+      {
+        "title": "Mobile Clients",
+        "icon": "device",
+        "items": [
+          "Android: Kotlin + Jetpack Compose",
+          "iOS: Swift + SwiftUI",
+          "TensorFlow Lite edge AI",
+          "Room / CoreData + SQLCipher",
+          "Offline-first sync"
+        ]
+      },
+      {
+        "title": "Cloud Backend",
+        "icon": "server",
+        "items": [
+          "Node.js / TypeScript Functions",
+          "Google Cloud Firestore",
+          "FCM v2 multicast",
+          "Immutable audit log",
+          "RBAC via Security Rules"
+        ]
+      },
+      {
+        "title": "Security & Auth",
+        "icon": "shield",
+        "items": [
+          "Firebase Auth + MFA TOTP",
+          "SAML 2.0 / OAuth SSO",
+          "AES-256 at-rest encryption",
+          "TLS 1.3 in transit",
+          "FERPA / GDPR compliant"
+        ]
+      }
+    ]
+  },
+  "admin": {
+    "title": "Total Situational Awareness for Your SOC",
+    "description": "A unified command console where security personnel broadcast alerts, monitor active zones, and coordinate first responders in real time.",
+    "features": [
+      { "title": "One-click multi-zone broadcast", "description": "Target alerts by building, GPS radius, or audience role" },
+      { "title": "Live responder tracking", "description": "GPS and status of all security, EMS, and fire personnel" },
+      { "title": "Immutable audit trail", "description": "Every alert, dispatch, and acknowledgment is logged for compliance" },
+      { "title": "Post-incident analytics", "description": "Replay timelines and generate reports for institutional review" }
+    ],
+    "stats": [
+      { "label": "Active Alerts", "value": "3" },
+      { "label": "Responders", "value": "12" },
+      { "label": "Affected", "value": "847" }
+    ]
+  },
+  "download": {
+    "title": "Download CampusAlert Pro Today",
+    "description": "Available on iOS and Android. Free for students, faculty, and staff at participating institutions.",
+    "platforms": [
+      {
+        "id": "ios",
+        "name": "App Store",
+        "description": "Download on the",
+        "url": "#"
+      },
+      {
+        "id": "android",
+        "name": "Google Play",
+        "description": "Get it on",
+        "url": "#"
+      }
+    ]
+  },
+  "footer": {
+    "links": {
+      "product": [
+        { "label": "Features", "href": "#features" },
+        { "label": "Architecture", "href": "#architecture" },
+        { "label": "Admin Portal", "href": "#admin" },
+        { "label": "Download", "href": "#download" }
+      ],
+      "legal": [
+        { "label": "Privacy Policy", "href": "#" },
+        { "label": "Terms of Service", "href": "#" },
+        { "label": "FERPA Compliance", "href": "#" },
+        { "label": "Security", "href": "#" }
+      ]
+    },
+    "status": {
+      "indicator": "All Systems Operational",
+      "online": true
+    }
+  }
+}

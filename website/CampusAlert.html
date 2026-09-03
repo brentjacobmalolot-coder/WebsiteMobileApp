@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CampusAlert - Advanced High-Security University Emergency Response System with Sub-Second Distributed Messaging">
+    <meta name="theme-color" content="#1B5E20">
+    <title>CampusAlert | Next-Generation Campus Safety</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <img src="assets/campusalert-logo.png" alt="CampusAlert Logo" class="loading-logo-img">
+            </div>
+            <h1 class="loading-brand">CampusAlert</h1>
+            <p class="loading-tagline">St. Columban College Safety System</p>
+            <div class="loading-progress">
+                <div class="loading-bar"></div>
+            </div>
+            <p class="loading-text">Initializing Secure Connection</p>
+        </div>
+    </div>
+
+    <header class="nav-header" id="navHeader">
+        <nav class="nav-container">
+            <a href="#" class="nav-brand">
+                <div class="nav-brand-icon">
+                    <img src="assets/campusalert-logo.png" alt="CampusAlert" class="nav-brand-img">
+                </div>
+                <div class="nav-brand-text">
+                    <span class="nav-brand-name">CampusAlert</span>
+                    
+                </div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#about" class="nav-link">System</a></li>
+                <li><a href="#campus" class="nav-link">Campus</a></li>
+                <li><a href="#security" class="nav-link">Security</a></li>
+                <li><a href="#team" class="nav-link">Team</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#download" class="btn btn-primary">
+                    <i data-lucide="download"></i>
+                    <span>Download</span>
+                </a>
+            </div>
+            <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </nav>
+    </header>
+
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="mobile-drawer-header">
+            <div class="nav-brand">
+                <div class="nav-brand-icon">
+                    <img src="assets/campusalert-logo.png" alt="CampusAlert" class="nav-brand-img">
+                </div>
+                <span>CampusAlert</span>
+            </div>
+            <button class="mobile-drawer-close" id="drawerClose">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+            <li><a href="#features" class="mobile-nav-link">Features</a></li>
+            <li><a href="#about" class="mobile-nav-link">System</a></li>
+            <li><a href="#campus" class="mobile-nav-link">Campus</a></li>
+            <li><a href="#security" class="mobile-nav-link">Security</a></li>
+            <li><a href="#team" class="mobile-nav-link">Team</a></li>
+        </ul>
+        <div class="mobile-nav-actions">
+            <a href="#download" class="btn btn-primary btn-block">
+                <i data-lucide="download"></i>
+                <span>Download App</span>
+            </a>
+        </div>
+    </div>
+    <div class="mobile-drawer-overlay" id="drawerOverlay"></div>
+
+    <main class="main-content">
+        <section class="section hero-section" id="hero">
+            <div class="hero-background">
+                <div class="hero-gradient"></div>
+                <div class="hero-pattern"></div>
+            </div>
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content reveal">
+                        <div class="hero-badge">
+                            <i data-lucide="zap"></i>
+                            <span>Sub-Second Response Technology</span>
+                        </div>
+                        <h1 class="hero-title">
+                            Seconds Matter:<br>
+                            <span class="gradient-text">The Next Generation</span><br>
+                            of Campus Safety
+                        </h1>
+                        <p class="hero-subtitle">
+                            CampusAlert delivers sub-second distributed messaging infrastructure
+                            connecting students, faculty, and security teams through military-grade
+                            encrypted digital mesh technology.
+                        </p>
+                        <div class="hero-actions">
+                            <button class="btn btn-primary btn-lg" id="heroDemoBtn">
+                                <i data-lucide="play-circle"></i>
+                                <span>Explore Platform</span>
+                            </button>
+                            <button class="btn btn-ghost btn-lg" id="heroLearnBtn">
+                                <i data-lucide="book-open"></i>
+                                <span>Learn More</span>
+                            </button>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat-card glass-card">
+                                <span class="stat-value">&lt;800ms</span>
+                                <span class="stat-label">Message Delivery</span>
+                            </div>
+                            <div class="stat-card glass-card">
+                                <span class="stat-value">256-bit</span>
+                                <span class="stat-label">AES Encryption</span>
+                            </div>
+                            <div class="stat-card glass-card">
+                                <span class="stat-value">99.9%</span>
+                                <span class="stat-label">Uptime SLA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-visual reveal-delay">
+                        <div class="campus-showcase">
+                            <div class="campus-image-wrapper glass-card">
+                                <img src="assets/campus-building.jpg" alt="St. Columban College Campus Building" class="campus-image-hero">
+                                <div class="campus-image-overlay"></div>
+                                <div class="campus-image-badge">
+                                    <i data-lucide="map-pin"></i>
+                                    <span>St. Columban College</span>
+                                </div>
+                            </div>
+                            <div class="campus-info-card glass-card">
+                                <div class="campus-info-icon">
+                                    <i data-lucide="building-2"></i>
+                                </div>
+                                <div class="campus-info-content">
+                                    <h4>Main Campus</h4>
+                                    <p>Protected 24/7</p>
+                                </div>
+                                <div class="campus-info-status">
+                                    <span class="status-indicator"></span>
+                                    <span>Active</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section features-section" id="features">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-badge">Core Technology</span>
+                    <h2 class="section-title">Why CampusAlert</h2>
+                    <p class="section-subtitle">
+                        Built on cutting-edge infrastructure delivering unmatched response times
+                        and reliability for critical campus communications.
+                    </p>
+                </div>
+                <div class="bento-grid features-grid">
+                    <div class="bento-card bento-large glass-card reveal">
+                        <div class="bento-icon">
+                            <i data-lucide="zap"></i>
+                        </div>
+                        <h3 class="bento-title">Sub-Second Multicast</h3>
+                        <p class="bento-description">
+                            Firebase Cloud Messaging delivers emergency alerts to 10,000+ devices
+                            in under 800 milliseconds through intelligent multicast routing.
+                        </p>
+                        <div class="bento-metric">
+                            <span class="metric-value">&lt;800ms</span>
+                            <span class="metric-label">Average delivery</span>
+                        </div>
+                    </div>
+                    <div class="bento-card glass-card reveal">
+                        <div class="bento-icon">
+                            <i data-lucide="cpu"></i>
+                        </div>
+                        <h3 class="bento-title">Edge AI Protection</h3>
+                        <p class="bento-description">
+                            TensorFlow Lite-powered threat detection runs locally on devices,
+                            providing instant analysis without cloud dependency.
+                        </p>
+                        <div class="bento-tags">
+                            <span class="tag">On-Device</span>
+                            <span class="tag">MLKit</span>
+                        </div>
+                    </div>
+                    <div class="bento-card glass-card reveal">
+                        <div class="bento-icon">
+                            <i data-lucide="map-pin"></i>
+                        </div>
+                        <h3 class="bento-title">Safe-Zone Routing</h3>
+                        <p class="bento-description">
+                            Precision Google Maps integration identifies safe evacuation routes
+                            and emergency assembly points in real-time.
+                        </p>
+                        <div class="bento-tags">
+                            <span class="tag">Maps SDK</span>
+                            <span class="tag">Geofencing</span>
+                        </div>
+                    </div>
+                    <div class="bento-card glass-card reveal">
+                        <div class="bento-icon">
+                            <i data-lucide="bell"></i>
+                        </div>
+                        <h3 class="bento-title">Smart Notifications</h3>
+                        <p class="bento-description">
+                            Context-aware alerting system prioritizes critical messages and
+                            adapts notification intensity based on threat level.
+                        </p>
+                        <div class="bento-tags">
+                            <span class="tag">Priority Queue</span>
+                            <span class="tag">DND-Aware</span>
+                        </div>
+                    </div>
+                    <div class="bento-card glass-card reveal">
+                        <div class="bento-icon">
+                            <i data-lucide="wifi"></i>
+                        </div>
+                        <h3 class="bento-title">Mesh Networking</h3>
+                        <p class="bento-description">
+                            Device-to-device communication ensures message delivery even when
+                            central infrastructure becomes overloaded.
+                        </p>
+                        <div class="bento-tags">
+                            <span class="tag">Offline-First</span>
+                            <span class="tag">P2P</span>
+                        </div>
+                    </div>
+                    <div class="bento-card bento-wide glass-card reveal">
+                        <div class="bento-icon">
+                            <i data-lucide="bar-chart-3"></i>
+                        </div>
+                        <h3 class="bento-title">Real-Time Analytics</h3>
+                        <p class="bento-description">
+                            Live dashboard monitoring response times, message reach, and system
+                            health metrics with millisecond precision.
+                        </p>
+                        <div class="bento-chart">
+                            <div class="chart-bar" style="--height: 60%"></div>
+                            <div class="chart-bar" style="--height: 80%"></div>
+                            <div class="chart-bar" style="--height: 45%"></div>
+                            <div class="chart-bar" style="--height: 90%"></div>
+                            <div class="chart-bar" style="--height: 70%"></div>
+                            <div class="chart-bar active" style="--height: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section about-section" id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content reveal">
+                        <span class="section-badge">Architecture</span>
+                        <h2 class="section-title">Digital Mesh Infrastructure</h2>
+                        <p class="about-text">
+                            CampusAlert bridges the communication gap between students, faculty,
+                            and security teams through a sophisticated digital mesh architecture.
+                            Every connected device becomes a node in a resilient network designed
+                            for critical communications.
+                        </p>
+                        <div class="about-features">
+                            <div class="about-feature">
+                                <div class="about-feature-icon">
+                                    <i data-lucide="users"></i>
+                                </div>
+                                <div class="about-feature-content">
+                                    <h4>Students</h4>
+                                    <p>Receive instant safety alerts and can report incidents with one tap.</p>
+                                </div>
+                            </div>
+                            <div class="about-feature">
+                                <div class="about-feature-icon">
+                                    <i data-lucide="graduation-cap"></i>
+                                </div>
+                                <div class="about-feature-content">
+                                    <h4>Faculty</h4>
+                                    <p>Automated classroom lockdown protocols and direct line to security.</p>
+                                </div>
+                            </div>
+                            <div class="about-feature">
+                                <div class="about-feature-icon">
+                                    <i data-lucide="shield"></i>
+                                </div>
+                                <div class="about-feature-content">
+                                    <h4>Security Teams</h4>
+                                    <p>Real-time situational awareness with precise location tracking.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-visual reveal-delay">
+                        <div class="architecture-diagram glass-card">
+                            <div class="diagram-header">
+                                <i data-lucide="network"></i>
+                                <span>System Architecture</span>
+                            </div>
+                            <div class="diagram-body">
+                                <div class="diagram-node node-center">
+                                    <i data-lucide="server"></i>
+                                    <span>Cloud Hub</span>
+                                </div>
+                                <div class="diagram-nodes">
+                                    <div class="diagram-node">
+                                        <i data-lucide="smartphone"></i>
+                                        <span>Mobile</span>
+                                    </div>
+                                    <div class="diagram-node">
+                                        <i data-lucide="monitor"></i>
+                                        <span>Web Portal</span>
+                                    </div>
+                                    <div class="diagram-node">
+                                        <i data-lucide="radio"></i>
+                                        <span>IoT Sensors</span>
+                                    </div>
+                                </div>
+                                <div class="diagram-connections">
+                                    <span class="connection"></span>
+                                    <span class="connection"></span>
+                                    <span class="connection"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section campus-section" id="campus">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-badge">Our Campus</span>
+                    <h2 class="section-title">Protecting St. Columban College</h2>
+                    <p class="section-subtitle">
+                        A state-of-the-art safety infrastructure deployed across every corner
+                        of our campus, ensuring students and faculty are protected 24/7.
+                    </p>
+                </div>
+                <div class="campus-gallery reveal">
+                    <div class="campus-main-card glass-card">
+                        <div class="campus-image-container">
+                            <img src="assets/campus-building.jpg" alt="St. Columban College Main Building" class="campus-image">
+                            <div class="campus-image-gradient"></div>
+                            <div class="campus-image-content">
+                                <h3>Main Academic Building</h3>
+                                <p>St. Columban College - Center of Excellence</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="campus-stats-grid">
+                        <div class="campus-stat-card glass-card">
+                            <div class="campus-stat-icon">
+                                <i data-lucide="users"></i>
+                            </div>
+                            <div class="campus-stat-info">
+                                <span class="campus-stat-number">5,000+</span>
+                                <span class="campus-stat-label">Students Protected</span>
+                            </div>
+                        </div>
+                        <div class="campus-stat-card glass-card">
+                            <div class="campus-stat-icon">
+                                <i data-lucide="building"></i>
+                            </div>
+                            <div class="campus-stat-info">
+                                <span class="campus-stat-number">12</span>
+                                <span class="campus-stat-label">Campus Buildings</span>
+                            </div>
+                        </div>
+                        <div class="campus-stat-card glass-card">
+                            <div class="campus-stat-icon">
+                                <i data-lucide="radio"></i>
+                            </div>
+                            <div class="campus-stat-info">
+                                <span class="campus-stat-number">48</span>
+                                <span class="campus-stat-label">IoT Sensors</span>
+                            </div>
+                        </div>
+                        <div class="campus-stat-card glass-card">
+                            <div class="campus-stat-icon">
+                                <i data-lucide="shield-check"></i>
+                            </div>
+                            <div class="campus-stat-info">
+                                <span class="campus-stat-number">24/7</span>
+                                <span class="campus-stat-label">Active Monitoring</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section security-section" id="security">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-badge emergency">Security</span>
+                    <h2 class="section-title">Military-Grade Protection</h2>
+                    <p class="section-subtitle">
+                        Your data security is our highest priority. CampusAlert implements
+                        enterprise-grade encryption and strict access controls.
+                    </p>
+                </div>
+                <div class="security-grid">
+                    <div class="security-card glass-card reveal">
+                        <div class="security-icon">
+                            <i data-lucide="lock"></i>
+                        </div>
+                        <h3 class="security-title">AES-256 Encryption</h3>
+                        <p class="security-description">
+                            All local data stored on devices uses AES-256 encryption through
+                            Room (Android) and CoreData (iOS) with SQLCipher integration.
+                        </p>
+                        <div class="security-badge">
+                            <i data-lucide="shield-check"></i>
+                            <span>Bank-Grade Security</span>
+                        </div>
+                    </div>
+                    <div class="security-card glass-card reveal">
+                        <div class="security-icon">
+                            <i data-lucide="user-check"></i>
+                        </div>
+                        <h3 class="security-title">Role-Based Access</h3>
+                        <p class="security-description">
+                            Strict RBAC ensures users only access data and features appropriate
+                            for their role—student, faculty, or security personnel.
+                        </p>
+                        <div class="security-badge">
+                            <i data-lucide="key"></i>
+                            <span>Granular Permissions</span>
+                        </div>
+                    </div>
+                    <div class="security-card glass-card reveal">
+                        <div class="security-icon">
+                            <i data-lucide="database"></i>
+                        </div>
+                        <h3 class="security-title">Data Isolation</h3>
+                        <p class="security-description">
+                            Each user's data is cryptographically isolated. No cross-contamination
+                            between personal and emergency data stores.
+                        </p>
+                        <div class="security-badge">
+                            <i data-lucide="box"></i>
+                            <span>Zero-Knowledge</span>
+                        </div>
+                    </div>
+                    <div class="security-card glass-card reveal">
+                        <div class="security-icon">
+                            <i data-lucide="eye-off"></i>
+                        </div>
+                        <h3 class="security-title">Privacy First</h3>
+                        <p class="security-description">
+                            Minimal data collection principle. Location data used only during
+                            active emergencies with automatic purge after resolution.
+                        </p>
+                        <div class="security-badge">
+                            <i data-lucide="eye"></i>
+                            <span>GDPR Compliant</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section download-section" id="download">
+            <div class="container">
+                <div class="download-grid">
+                    <div class="download-content reveal">
+                        <span class="section-badge">Get the App</span>
+                        <h2 class="section-title">Install CampusAlert  Today</h2>
+                        <p class="section-subtitle">
+                            Get instant access to sub-second emergency alerts, safe-zone routing,
+                            and direct communication with campus security. Available now on Google Play.
+                        </p>
+                        <div class="download-features">
+                            <div class="download-feature">
+                                <i data-lucide="check-circle"></i>
+                                <span>Free for students & faculty</span>
+                            </div>
+                            <div class="download-feature">
+                                <i data-lucide="check-circle"></i>
+                                <span>Verified by your institution</span>
+                            </div>
+                            <div class="download-feature">
+                                <i data-lucide="check-circle"></i>
+                                <span>Works offline with mesh networking</span>
+                            </div>
+                            <div class="download-feature">
+                                <i data-lucide="check-circle"></i>
+                                <span>Sub-second alert delivery</span>
+                            </div>
+                        </div>
+                        <div class="download-badges">
+                            <a href="https://play.google.com/store/apps/details?id=com.campusalert.pro" class="playstore-badge" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
+                                <svg class="playstore-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.1 225L401.2 184l-67.1 67.1 67.1 67.1 71.9-41.1c20.6-16.2 20.6-50.1-.1-66.1zm-67.1 102.1L325.3 277.7l60.1 60.1 280.8-161.2-261 150.5z" fill="#ffffff"/>
+                                </svg>
+                                <div class="playstore-text">
+                                    <span class="playstore-small">GET IT ON</span>
+                                    <span class="playstore-large">Google Play</span>
+                                </div>
+                            </a>
+                            <div class="download-stats">
+                                <div class="download-stat">
+                                    <i data-lucide="star"></i>
+                                    <div>
+                                        <span class="stat-number">4.8</span>
+                                        <span class="stat-text">Rating</span>
+                                    </div>
+                                </div>
+                                <div class="download-stat">
+                                    <i data-lucide="download"></i>
+                                    <div>
+                                        <span class="stat-number">50K+</span>
+                                        <span class="stat-text">Installs</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-visual reveal-delay">
+                        <div class="phone-mockup glass-card">
+                            <div class="phone-screen">
+                                <div class="phone-status">
+                                    <span>9:41</span>
+                                    <div class="phone-icons">
+                                        <i data-lucide="signal"></i>
+                                        <i data-lucide="wifi"></i>
+                                        <i data-lucide="battery-full"></i>
+                                    </div>
+                                </div>
+                                <div class="phone-app">
+                                    <div class="phone-header">
+                                        <div class="phone-logo">
+                                            <i data-lucide="shield-check"></i>
+                                        </div>
+                                        <span>CampusAlert</span>
+                                    </div>
+                                    <div class="phone-card">
+                                        <div class="phone-alert-icon">
+                                            <i data-lucide="alert-triangle"></i>
+                                        </div>
+                                        <h4>Emergency Alert</h4>
+                                        <p>Severe weather warning in your area. Move to nearest shelter.</p>
+                                        <div class="phone-meta">
+                                            <i data-lucide="clock"></i>
+                                            <span>2 minutes ago</span>
+                                        </div>
+                                    </div>
+                                    <div class="phone-card phone-card-secondary">
+                                        <div class="phone-alert-icon secondary">
+                                            <i data-lucide="map-pin"></i>
+                                        </div>
+                                        <h4>Safe Zone Located</h4>
+                                        <p>Building B - 200m away</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section team-section" id="team">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-badge">Team</span>
+                    <h2 class="section-title">Expert Development Team</h2>
+                    <p class="section-subtitle">
+                        Multidisciplinary systems engineers and security specialists
+                        building the future of campus safety.
+                    </p>
+                </div>
+                <div class="team-grid">
+                    <div class="team-card glass-card reveal">
+                        <div class="team-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <h4 class="team-name">Systems Architect</h4>
+                        <span class="team-role">Lead Infrastructure Engineer</span>
+                        <p class="team-bio">
+                            Distributed systems specialist with expertise in real-time
+                            messaging protocols and edge computing architecture.
+                        </p>
+                        <div class="team-tags">
+                            <span>Cloud Architecture</span>
+                            <span>Firebase</span>
+                        </div>
+                    </div>
+                    <div class="team-card glass-card reveal">
+                        <div class="team-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <h4 class="team-name">Security Engineer</h4>
+                        <span class="team-role">Cryptography Lead</span>
+                        <p class="team-bio">
+                            Former cybersecurity analyst specializing in encryption
+                            protocols and secure data transmission systems.
+                        </p>
+                        <div class="team-tags">
+                            <span>AES-256</span>
+                            <span>RSA</span>
+                        </div>
+                    </div>
+                    <div class="team-card glass-card reveal">
+                        <div class="team-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <h4 class="team-name">Mobile Developer</h4>
+                        <span class="team-role">Cross-Platform Lead</span>
+                        <p class="team-bio">
+                            Expert in native and cross-platform mobile development
+                            with focus on performance optimization and accessibility.
+                        </p>
+                        <div class="team-tags">
+                            <span>React Native</span>
+                            <span>Kotlin</span>
+                        </div>
+                    </div>
+                    <div class="team-card glass-card reveal">
+                        <div class="team-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <h4 class="team-name">UX Designer</h4>
+                        <span class="team-role">Interface Specialist</span>
+                        <p class="team-bio">
+                            Human factors engineer designing intuitive interfaces
+                            for high-stress emergency communication scenarios.
+                        </p>
+                        <div class="team-tags">
+                            <span>Design Systems</span>
+                            <span>Accessibility</span>
+                        </div>
+                    </div>
+                    <div class="team-card glass-card reveal">
+                        <div class="team-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <h4 class="team-name">ML Engineer</h4>
+                        <span class="team-role">AI/ML Specialist</span>
+                        <p class="team-bio">
+                            Machine learning engineer implementing TensorFlow Lite
+                            models for on-device threat detection and classification.
+                        </p>
+                        <div class="team-tags">
+                            <span>TensorFlow</span>
+                            <span>Edge AI</span>
+                        </div>
+                    </div>
+                    <div class="team-card glass-card reveal">
+                        <div class="team-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <h4 class="team-name">DevOps Engineer</h4>
+                        <span class="team-role">Infrastructure Lead</span>
+                        <p class="team-bio">
+                            Cloud infrastructure specialist ensuring 99.9% uptime
+                            with automated monitoring and incident response.
+                        </p>
+                        <div class="team-tags">
+                            <span>Kubernetes</span>
+                            <span>CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="nav-brand-icon">
+                            <img src="assets/campusalert-logo.png" alt="CampusAlert" class="nav-brand-img">
+                        </div>
+                        <span>CampusAlert</span>
+                    </div>
+                    <p class="footer-tagline">
+                        Advanced campus safety technology for educational institutions worldwide.
+                    </p>
+                    <a href="https://play.google.com/store/apps/details?id=com.campusalert.pro" class="playstore-badge footer-playstore" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
+                        <svg class="playstore-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.1 225L401.2 184l-67.1 67.1 67.1 67.1 71.9-41.1c20.6-16.2 20.6-50.1-.1-66.1zm-67.1 102.1L325.3 277.7l60.1 60.1 280.8-161.2-261 150.5z" fill="#ffffff"/>
+                        </svg>
+                        <div class="playstore-text">
+                            <span class="playstore-small">GET IT ON</span>
+                            <span class="playstore-large">Google Play</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#security">Security</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Documentation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CampusAlert. All rights reserved.</p>
+                <p class="footer-build">
+                    <i data-lucide="code"></i>
+                    Built with security-first principles
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast-container" id="toastContainer"></div>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+# Node / Cloud Functions
+backend/functions/node_modules/
+backend/functions/lib/
+backend/functions/.env
+backend/functions/firebase-debug.log
+
+# Firebase
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+pubsub-debug.log
+*.local
+
+# Android / Kotlin
+mobile/android/.gradle/
+mobile/android/build/
+mobile/android/app/build/
+mobile/android/local.properties
+mobile/android/.idea/
+mobile/android/captures/
+mobile/android/.cxx/
+mobile/android/schemas/
+*.iml
+*.keystore
+!debug.keystore
+
+# iOS / Swift
+mobile/ios/Pods/
+mobile/ios/build/
+mobile/ios/DerivedData/
+mobile/ios/*.xcodeproj/xcuserdata/
+mobile/ios/*.xcworkspace/xcuserdata/
+mobile/ios/*.xcodeproj/project.xcworkspace/xcuserdata/
+mobile/ios/*.pbxuser
+mobile/ios/*.mode1v3
+mobile/ios/*.mode2v3
+mobile/ios/*.perspectivev3
+mobile/ios/*.xccheckout
+mobile/ios/.swiftpm/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Sensitive
+google-services.json
+GoogleService-Info.plist
+*.pem
+*.p12
+*.key
+.env
+.env.local
