@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">CampusAlert Pro</string>
-    <string name="default_notification_channel_id">alerts.general</string>
-    <string name="critical_notification_channel_id">alerts.critical</string>
-    <string name="app_tagline">Seconds Matter</string>
-    <string name="emergency_protocols">Emergency Protocols</string>
-    <string name="all_systems_operational">All Systems Operational</string>
-</resources>
