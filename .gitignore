@@ -55,3 +55,6 @@ GoogleService-Info.plist
 *.key
 .env
 .env.local
+
+.vercel
+.env*
