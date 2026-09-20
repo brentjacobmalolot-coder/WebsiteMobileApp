@@ -194,9 +194,8 @@
         .loading-screen.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
         .loader { display: grid; justify-items: center; gap: 22px; }
         .loader-mark {
-            width: 76px; height: 76px; display: grid; place-items: center;
-            border-radius: 22px; color: #03120d; font-family: "Manrope", sans-serif; font-size: 25px; font-weight: 800;
-            background: linear-gradient(145deg, var(--green), var(--cyan));
+            width: 82px; height: 82px; display: block;
+            border-radius: 24px; object-fit: cover;
             box-shadow: 0 0 0 1px rgba(255,255,255,.2), 0 18px 50px rgba(var(--green-rgb), .3);
             animation: loader-breathe 1.8s ease-in-out infinite;
         }
@@ -232,9 +231,8 @@
         .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 28px; }
         .brand { display: inline-flex; align-items: center; gap: 11px; flex-shrink: 0; }
         .brand-mark {
-            width: 39px; height: 39px; display: grid; place-items: center;
-            border-radius: 12px; color: #03120d; font-family: "Manrope", sans-serif; font-size: 13px; font-weight: 800;
-            background: linear-gradient(145deg, var(--green), var(--cyan));
+            width: 39px; height: 39px; display: block;
+            border-radius: 12px; object-fit: cover;
             box-shadow: 0 8px 24px rgba(var(--green-rgb), .22);
             transition: transform .35s var(--ease);
         }
@@ -331,6 +329,33 @@
         .app-actions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 10px; }
         .app-action { padding: 9px 4px; border: 1px solid var(--line-soft); border-radius: 11px; color: var(--muted); background: rgba(255,255,255,.025); text-align: center; font-size: 7px; }
         .app-action svg { width: 13px; height: 13px; margin: 0 auto 4px; color: var(--green); }
+        /* Admin analytics preview */
+        .analytics-app { min-height: 550px; padding: 0 12px 14px; color: #17261b; background: #f3f6f3; }
+        .analytics-topbar { height: 33px; display: flex; align-items: center; justify-content: space-between; color: #eaf3ed; }
+        .analytics-wordmark { font-family: "Manrope", sans-serif; font-size: 10px; font-weight: 800; letter-spacing: -.02em; }
+        .analytics-topbar svg { width: 15px; height: 15px; }
+        .analytics-cover { position: relative; height: 145px; margin: 0 -12px 13px; overflow: hidden; padding: 76px 15px 14px; background: linear-gradient(180deg, rgba(5,15,12,.05), rgba(12,37,20,.78)), linear-gradient(115deg, rgba(70,158,116,.5), rgba(211,204,92,.32)), url("images/campus-building.jpg") center / cover; }
+        .analytics-cover::before { content: ""; position: absolute; inset: 0; opacity: .75; background: linear-gradient(132deg, transparent 18%, rgba(255,255,255,.38) 18.5% 20%, transparent 20.5% 42%, rgba(255,255,255,.25) 42.5% 44%, transparent 44.5%), linear-gradient(90deg, transparent 66%, rgba(242,207,78,.65) 66% 71%, transparent 71%); }
+        .analytics-cover > * { position: relative; z-index: 1; }
+        .analytics-cover span { display: block; margin-bottom: 3px; color: rgba(255,255,255,.78); font-size: 8px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+        .analytics-cover strong { color: #fff; font-family: "Manrope", sans-serif; font-size: 18px; letter-spacing: -.045em; }
+        .analytics-content { padding: 0 1px; }
+        .analytics-metrics { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+        .analytics-metric { padding: 12px; border: 1px solid #e6ece7; border-radius: 13px; background: #fff; box-shadow: 0 7px 16px rgba(17,42,25,.09); }
+        .analytics-metric strong { display: block; color: #1c6237; font-family: "Manrope", sans-serif; font-size: 20px; line-height: 1; }
+        .analytics-metric.pending strong { color: #e34a4a; }
+        .analytics-metric span { display: block; margin-top: 5px; color: #66736b; font-size: 8px; font-weight: 700; }
+        .engagement-card { display: flex; align-items: center; gap: 10px; margin-top: 10px; padding: 11px; border: 1px solid #e6ece7; border-radius: 13px; background: #fff; box-shadow: 0 7px 16px rgba(17,42,25,.09); }
+        .engagement-icon { width: 32px; height: 32px; display: grid; place-items: center; border: 1px solid #f0d491; border-radius: 10px; color: #efad20; background: #fff8e8; }
+        .engagement-icon svg { width: 16px; height: 16px; fill: currentColor; stroke: currentColor; }
+        .engagement-card strong { display: block; color: #f0a916; font-size: 16px; line-height: 1; }
+        .engagement-card span { display: block; margin-top: 3px; color: #66736b; font-size: 8px; font-weight: 700; }
+        .insights-title { display: block; margin: 15px 0 8px; color: #235e36; font-size: 10px; font-weight: 800; }
+        .insights-card { height: 132px; padding: 12px; border: 1px solid #e6ece7; border-radius: 14px; background: #fff; box-shadow: 0 7px 16px rgba(17,42,25,.07); }
+        .insights-card svg { width: 100%; height: 100%; overflow: visible; }
+        .insights-grid { stroke: #e9efea; stroke-width: 1; }
+        .insights-line { fill: none; stroke: #2aa467; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+        .insights-area { fill: url(#analyticsArea); opacity: .23; }
         .float-card { position: absolute; z-index: 5; display: flex; align-items: center; gap: 10px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 15px; background: rgba(8, 15, 31, .86); box-shadow: 0 16px 38px rgba(0,0,0,.3); backdrop-filter: blur(14px); animation: float-card 4.5s ease-in-out infinite; }
         .float-card-icon { width: 31px; height: 31px; display: grid; place-items: center; border-radius: 10px; }
         .float-card-icon svg { width: 15px; height: 15px; }
@@ -591,7 +616,7 @@
 <body>
     <div class="loading-screen" id="loadingScreen" aria-hidden="true">
         <div class="loader">
-            <div class="loader-mark">CA</div>
+            <img class="loader-mark" src="images/campusalert-app-icon.png" alt="CampusAlert logo">
             <div class="loader-title">CampusAlert</div>
             <div class="loader-line"></div>
         </div>
@@ -602,7 +627,7 @@
     <header class="navbar" id="navbar">
         <div class="container nav-inner">
             <a class="brand" href="#home" aria-label="CampusAlert home">
-                <span class="brand-mark">CA</span>
+                <img class="brand-mark" src="images/campusalert-app-icon.png" alt="">
                 <span class="brand-name">CampusAlert<small>Campus intelligence</small></span>
             </a>
             <nav aria-label="Primary navigation">
@@ -630,7 +655,7 @@
     <div class="menu-scrim" id="menuScrim"></div>
     <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
         <div class="mobile-menu-head">
-            <a class="brand" href="#home"><span class="brand-mark">CA</span><span class="brand-name">CampusAlert</span></a>
+            <a class="brand" href="#home"><img class="brand-mark" src="images/campusalert-app-icon.png" alt=""><span class="brand-name">CampusAlert</span></a>
             <button class="mobile-close" id="menuClose" type="button" aria-label="Close navigation menu">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m5 5 14 14"/><path d="m19 5-14 14"/></svg>
             </button>
@@ -678,38 +703,25 @@
                                 <div class="device-notch"></div>
                                 <div class="device-screen">
                                     <div class="device-status"><span>9:41</span><span class="device-status-icons"><i></i><i></i><i></i></span></div>
-                                    <div class="device-app">
-                                        <div class="app-header">
-                                            <div class="app-brand">
-                                                <span class="app-brand-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
-                                                <span><strong>CampusAlert</strong><span>Make campus better</span></span>
+                                    <div class="device-app analytics-app">
+                                        <div class="analytics-topbar"><span class="analytics-wordmark">CampusAlert</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="5" r="1" fill="currentColor"/><circle cx="12" cy="12" r="1" fill="currentColor"/><circle cx="12" cy="19" r="1" fill="currentColor"/></svg></div>
+                                        <div class="analytics-cover"><span>Admin dashboard</span><strong>Campus Analytics</strong></div>
+                                        <div class="analytics-content">
+                                            <div class="analytics-metrics">
+                                                <div class="analytics-metric"><strong>24</strong><span>Total reports</span></div>
+                                                <div class="analytics-metric pending"><strong>06</strong><span>Pending issues</span></div>
                                             </div>
-                                            <span class="app-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg></span>
-                                        </div>
-                                        <div class="app-welcome"><span>Good morning</span><strong>What needs attention?</strong></div>
-                                        <div class="report-card">
-                                            <div class="report-top">
-                                                <span class="report-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
-                                                <strong>Report in review</strong><span class="report-time">Just now</span>
-                                            </div>
-                                            <p>Broken pathway light near the main academic building.</p>
-                                            <div class="status-track"><span class="status-node done"></span><span class="status-node done"></span><span class="status-node current"></span><span class="status-node"></span></div>
-                                            <div class="status-labels"><span>Received</span><span>Triaged</span><span>Assigned</span><span>Resolved</span></div>
-                                        </div>
-                                        <div class="app-section-label"><span>Nearby campus</span><span>Live map</span></div>
-                                        <div class="map-card"><span class="map-road"></span><span class="map-route"></span><span class="map-pin"></span><span class="map-label">Safe route</span></div>
-                                        <div class="app-actions">
-                                            <span class="app-action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg>Report</span>
-                                            <span class="app-action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Track</span>
-                                            <span class="app-action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Safety</span>
+                                            <div class="engagement-card"><span class="engagement-icon"><svg viewBox="0 0 24 24"><path d="m12 3 2.78 5.63 6.22.9-4.5 4.39 1.06 6.2L12 17.2l-5.56 2.92 1.06-6.2L3 9.53l6.22-.9L12 3z"/></svg></span><span><strong>76%</strong><span>Community engagement</span></span></div>
+                                            <span class="insights-title">Faculty insights</span>
+                                            <div class="insights-card"><svg viewBox="0 0 240 108" role="img" aria-label="Report activity trend"><defs><linearGradient id="analyticsArea" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#2aa467"/><stop offset="1" stop-color="#2aa467" stop-opacity="0"/></linearGradient></defs><path class="insights-grid" d="M0 20H240M0 54H240M0 88H240"/><path class="insights-area" d="M0 84 35 69 72 74 108 45 145 56 180 25 214 38 240 15V108H0Z"/><path class="insights-line" d="M0 84 35 69 72 74 108 45 145 56 180 25 214 38 240 15"/></svg></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="float-card float-one"><span class="float-card-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4L19 6"/></svg></span><span><strong>Report received</strong><span>Visual evidence attached</span></span></div>
-                        <div class="float-card float-two"><span class="float-card-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg></span><span><strong>Status updated</strong><span>Facilities assigned</span></span></div>
-                        <div class="float-card float-three"><span class="float-card-icon violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 8c0-2 3-3 7-3s7 1 7 3-3 3-7 3-7 1-7 3 3 3 7 3 7-1 7-3"/></svg></span><span><strong>Priority triaged</strong><span>Medium impact</span></span></div>
+                        <div class="float-card float-one"><span class="float-card-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4L19 6"/></svg></span><span><strong>18 resolved</strong><span>This week</span></span></div>
+                        <div class="float-card float-two"><span class="float-card-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-7"/></svg></span><span><strong>Activity up</strong><span>12% this month</span></span></div>
+                        <div class="float-card float-three"><span class="float-card-icon violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 8c0-2 3-3 7-3s7 1 7 3-3 3-7 3-7 1-7 3 3 3 7 3 7-1 7-3"/></svg></span><span><strong>6 pending</strong><span>Needs review</span></span></div>
                         <div class="scene-caption"><span>St. Columban College</span><span>Connected</span></div>
                     </div>
                 </div>
@@ -892,21 +904,21 @@
                 </div>
                 <div class="team-grid">
                     <article class="team-card reveal">
-                        <img src ="john.jpg" alt="John Razel A. Mosqueda" class="team-photo">
+                        <img src ="images/john.jpg" alt="John Razel A. Mosqueda" class="team-photo">
                         <h3 class="team-name">John Razel A. Mosqueda</h3>
                         <span class="team-role">Project Manager</span>
                         <p class="team-bio">Keeps the vision, timeline, and campus needs aligned so every release moves the product toward a more useful student experience.</p>
                         <div class="team-tags"><span class="team-tag">Planning</span><span class="team-tag">Coordination</span><span class="team-tag">Leadership</span></div>
                     </article>
                     <article class="team-card reveal" style="transition-delay:.12s">
-                        <img src ="brent.jpg" alt="Brent Jacob T. Malolot" class="team-photo">
+                        <img src ="images/brent.jpg" alt="Brent Jacob T. Malolot" class="team-photo">
                         <h3 class="team-name">Brent Jacob T. Malolot</h3>
                         <span class="team-role">Programmer</span>
                         <p class="team-bio">Turns the CampusAlert concept into a responsive, reliable digital experience with thoughtful interactions and clean technical foundations.</p>
                         <div class="team-tags"><span class="team-tag">Development</span><span class="team-tag">UI Engineering</span><span class="team-tag">Problem Solving</span></div>
                     </article>
                     <article class="team-card reveal" style="transition-delay:.24s">
-                        <img src ="assets/images/althea-gulam.jpg" alt="Althea Gulam" class="team-photo">
+                        <img src ="images/gulam.jpg" alt="Althea Gulam" class="team-photo">
                         <h3 class="team-name">Althea Gulam</h3>
                         <span class="team-role">Quality Assurance</span>
                         <p class="team-bio">Protects the experience by checking every flow, edge case, and status update so students can report with confidence.</p>
@@ -942,7 +954,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a class="brand" href="#home"><span class="brand-mark">CA</span><span class="brand-name">CampusAlert<small>Campus intelligence</small></span></a>
+                    <a class="brand" href="#home"><img class="brand-mark" src="images/campusalert-app-icon.png" alt=""><span class="brand-name">CampusAlert<small>Campus intelligence</small></span></a>
                     <p>A collaborative mobile platform that helps students and university administration see, prioritize, and resolve campus issues together.</p>
                     <span class="eyebrow"><span class="eyebrow-dot"></span> Safer. Clearer. Student-centered.</span>
                 </div>
